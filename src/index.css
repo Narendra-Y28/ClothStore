@@ -1,0 +1,219 @@
+
+.landingView {
+  background-image: url('./imgs/Homepage.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  opacity: 0.9;
+
+}
+
+.banner {
+  padding: 15px;
+  color: white;
+  background-color: lightslategray;
+  text-align: center;
+  font-weight: bold;
+}
+
+.topBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  padding: 10px 20px;
+  color: black;
+ font-weight: 700;
+ background-color: rgba(255, 255, 255, 0.8);
+}
+.header p {
+  margin: 0;
+  font-size: 1rem;  
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 10px;
+
+}
+
+/* Nav bar section css */
+.navSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  position: sticky;
+}
+
+.navSection:hover{
+  background-color: white;
+}
+
+.NavBar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.NavBar li {
+  font-weight: 700;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+.NavBar li:hover {
+  text-decoration: underline;
+}
+.tagLine{
+  margin-top: 10%;
+  font-size: xx-large;
+}
+.discoverBtn{
+  background: transparent;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: large;
+  cursor: pointer;
+}
+.discoverBtn:hover {
+  background-color: black; 
+  color: white; 
+  border-color: transparent;
+}
+.dropDownMenu{
+  display: none;
+}
+.newArrivals:hover   .dropDownMenu{
+  display: block;
+}
+.shoesMenu:hover .dropDownMenu{
+  display: block;
+}
+.forAcces:hover .dropDownMenu{
+  display: block;
+}
+.forCollections:hover .dropDownMenu{
+  display: block;
+}
+
+.dropDownMenu ul {
+  list-style: none;
+  margin-top: 10px;
+  align-items: self-start;
+  display: flex;
+  flex-direction: column;
+ justify-content: left;
+}
+
+.dropDownMenu li {
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+} 
+.dropDownMenu li:hover {
+  text-decoration: none;
+}
+
+
+/* Second page CSS */
+
+
+.itemsPage{
+background-color: white;
+height: 100vh;
+width: 100vw;
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+}
+.subTitle{
+  color: rgb(13, 121, 228);
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  margin-top: 20px;
+  
+}
+.title{
+  color: rgb(13, 121, 228);
+  font-weight: 600;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 40px;
+}
+.itemCards{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.card{
+  position: relative;
+}
+.imgCard{
+  width: 25vw;
+  height: 70vh;
+  border-radius: 10px;
+  object-fit: fill;
+  box-shadow: 0 4px 10px;
+  cursor: pointer;
+}
+.cardTitle{
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 40%;
+  color: white;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.cardTitle:hover{
+  color: rgb(161, 212, 216);
+}
+
+
+/* carousel page */
+/* .carouselPage{
+  background-color:  rgba(255, 255, 231, 0.8);
+
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.carouselContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.carouselImg{
+  margin-top: 50px;
+  width: 30vw;
+  height: 60vh;
+  margin-right: 50px;
+} */
+
