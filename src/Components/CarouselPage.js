@@ -1,59 +1,62 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import 'bootstrap'
 
 export default function CarouselPage() {
+
+    const [currentSlide, setCurrentSlide] = useState(0)
+
+    const slides =  [
+        {id:0, src: "https://www.velasca.com/cdn/shop/files/nov_2024_rimando_lookbook_abruzzo.jpg?v=1730980803&width=3000",
+            title: "A SLECTION OF YOYR FAVORITE LOOKS",
+            tagLine: "That winter charm",
+            descrption: "In winter, fashion is a balance between comfort and elegance, wrapped up in the perfect coat.",
+        },
+        {id:1, src: "https://www.velasca.com/cdn/shop/files/nov_2024_rimando_bok.jpg?v=1730906128&width=3000",
+            title: "Blue of a Kind",
+            tagLine: "Where style meets the depth of blue.",
+            descrption: "Elegance in every shade, a true masterpiece in blue. A dress that speaks the language of sophistication and style.",
+        },
+        {id:2, src: "https://www.velasca.com/cdn/shop/files/ott_2024_rimando_stile_classico.jpg?v=1728573604&width=3000",
+            title: "THE ELEGANCE OF DESIGN",
+            tagLine: "Top-quality craftsmanship",
+            descrption: "Unveiling timeless beauty through impeccable design. Where every detail speaks of sophistication and grace.",
+        },
+    ]
+const prevSlide = ()=>{
+    setCurrentSlide((prevSlide)=> (prevSlide + 1) % slides.length )
+}
+const nextSlide = ()=>{
+    setCurrentSlide((prevSlide)=> (prevSlide - 1 + slides.length) % slides.length)
+}
+
+useEffect(()=>{
+    const slideInterval = setInterval(nextSlide,5000)
+    return ()=> clearInterval(slideInterval)
+},[])
+
    
   return (
     <div className='carouselPage'>
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-            <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                <div className="carouselContent">
-                    <img className="carouselImg" src="https://www.velasca.com/cdn/shop/files/nov_2024_rimando_lookbook_abruzzo.jpg?v=1730980803&width=3000" alt="First slide"/>
-                        <div classNameName='carouselTitle'>
-                            <h3>A SLECTION OF YOYR FAVORITE LOOKS</h3>
-                            <h2>That winter charm</h2>
-                        </div>
+        <div className="carouselContent">
+        <button className='carouselButton prev' onClick={prevSlide}> &lt; </button>
+            <img className="carouselImg" src={slides[currentSlide].src} alt="First slide"/>
+                <div className='carouselText'>   
+                    <h3>{slides[currentSlide].title}</h3>
+                    <h2>{slides[currentSlide].tagLine}</h2>
+                    <p>{slides[currentSlide].descrption}</p>
                 </div>
-                </div>
-
-                <div className="carousel-item">
-                    <div className="carouselContent">
-                        <img className="carouselImg" src="https://www.velasca.com/cdn/shop/files/nov_2024_rimando_bok.jpg?v=1730906128&width=3000" alt="Second slide"/>
-                        <div className='carouselTitle'>
-                                <h3>A SLECTION OF YOYR FAVORITE LOOKS</h3>
-                                <h2>That winter charm</h2>
-                            </div>
-                    </div>
-                </div>
-
-            
-                <div className="carousel-item">
-                    <div className="carouselContent">
-                        <img className="carouselImg" src="https://www.velasca.com/cdn/shop/files/ott_2024_rimando_stile_classico.jpg?v=1728573604&width=3000" alt="Third slide"/>
-                        <div className='carouselTitle'>
-                                <h3>A SLECTION OF YOYR FAVORITE LOOKS</h3>
-                                <h2>That winter charm</h2>
-                            </div>
-                    </div>        
-                </div>
-            </div>
-            <div className='navigateButtons'>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-                </div>
+                <button className='carouselButton next' onClick={nextSlide}> &gt; </button>     
         </div>
+        <div className="carouselIndicators">
+        {slides.map((slide, index) => (
+          <button
+            key={slide.id}
+            className={`indicator ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
     </div>
+
   )
 }

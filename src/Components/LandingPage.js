@@ -11,7 +11,9 @@ export default function LandingPage() {
             <div className='header'>
                 <p>Free Shopping and return | Join the community</p>
                 <img className='logo' src= "https://wl3-cdn.landsec.com/sites/default/files/images/shops/logos/crew_clothing_company.png" alt=''/>
-                <p>shipping <nbsp/> | order by: +91 9652146503 <nbsp/> |  Whatsapp</p>
+                <p>shipping <nbsp/> | order by: +91 9652146503 <nbsp/> |  
+                  <a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>
+                </p>
             </div>
         </div>
     

@@ -192,28 +192,35 @@ flex-direction: column;
   color: rgb(161, 212, 216);
 }
 
-
-/* carousel page */
-/* .carouselPage{
-  background-color:  rgba(255, 255, 231, 0.8);
-
-  width: 100vw;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
+/* Carousel Page */
+.carouselPage{
   display: flex;
-
+  flex-direction: column;
+  background-color: rgb(241, 245, 246);
+ padding: 20px;
 }
 .carouselContent{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+  justify-content: space-evenly;
+}
+.carouselText{
+  margin-top: 10%;
 }
 .carouselImg{
-  margin-top: 50px;
-  width: 30vw;
+  width: 25vw;
   height: 60vh;
-  margin-right: 50px;
-} */
+  object-fit: fill;
+}
+.carouselButton{
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+
+}
+.carouselButton.prev{
+  margin-top: 5%;
+}
+
+
 
