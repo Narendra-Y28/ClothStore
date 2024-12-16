@@ -1,9 +1,13 @@
 import React from 'react'
 import NavSection from './NavSection'
+import SecondPage from './SecondPage'
+import CarouselPage from './CarouselPage'
+import FooterPage from './FooterPage'
 
 
 export default function LandingPage() {
   return (
+    <>
     <div className='landingView'>
             <p className='banner'>Festival offer here!! 20%off on all brands</p>
 
@@ -22,5 +26,9 @@ export default function LandingPage() {
         <h2 className='tagLine'> “Shop ’til you drop!”</h2>
         <button className='discoverBtn'>Discover Your products</button>
     </div>
+    <SecondPage/>
+    <CarouselPage/>
+    <FooterPage/>
+    </>
   )
 }

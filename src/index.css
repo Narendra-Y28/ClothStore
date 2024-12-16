@@ -63,6 +63,7 @@
 
 .navSection:hover{
   background-color: white;
+  
 }
 
 .NavBar ul {
@@ -78,6 +79,8 @@
   font-size: 1rem;
   color: black;
   cursor: pointer;
+  position: relative;
+
 }
 
 .NavBar li:hover {
@@ -103,6 +106,7 @@
 }
 .dropDownMenu{
   display: none;
+ 
 }
 .newArrivals:hover   .dropDownMenu{
   display: block;
@@ -222,5 +226,218 @@ flex-direction: column;
   margin-top: 5%;
 }
 
+/* Footer Section */
+.footerSection {
+  margin-top: 5%;
+}
+
+/* Footer Banner */
+.footerBanner {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerImg {
+  height: 50vh;
+  margin-left: 20%;
+  
+}
+
+.footerBanner div {
+  max-width: 500px;
+}
+
+.footerBanner h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.footerBanner p {
+  margin-bottom: 15px;
+}
+
+.footerBanner input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.footerBanner button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.footerBanner button:hover {
+  background-color: #555;
+}
+
+/* Footer Content */
+.footer {
+  background-color: rgb(62, 61, 61);
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  color: white;
+}
+
+.footerSectionItem {
+  flex: 1;
+  padding: 10px;
+  max-width: 300px;
+}
+
+.footerSectionItem h4, .footerSectionItem h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.footerSectionItem ul {
+  list-style-type: none;
+  padding-left: 0;
+ 
+}
+
+.footerSectionItem li {
+  margin: 8px 0;
+  display: flex;
+  justify-content: flex-start;
+}
 
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerSectionItem {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footerBanner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerImg {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Shoes page */
+
+.shoesPage{
+  background-color: rgb(248, 248, 237);
+  height: 100%;
+}
+.filterBar{
+  background-color: #fff;
+  height: 10%;
+  color: rgb(23,80, 119);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.optionsList ul{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style: none;
+  margin-top: 15px;
+  margin-left: 5px;
+
+  li{
+    cursor: pointer;
+  }
+}
+.searchBar{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 70%;
+  margin-top: 10px;
+  margin-right: 30px;
+
+  input{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: dotted;
+  }
+
+}
+.filterMenu{
+  background-color: #fff;
+  position: relative;
+  ul{
+    display: flex;
+    flex-direction:column;
+    list-style: none;
+    padding-right: 10px;
+    li {
+     display: flex;
+     justify-content: flex-start;
+     margin-top:9px ;
+     .radioBtn{
+      margin: 6px;
+     }
+    }
+  }
+}
+.productsList{
+  display: flex;
+  flex-direction:column;
+  margin: 30px;
+  gap: 30px;
+}
+.inrtoBox{
+  width: 25%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 25px;
+  border-right: 15px solid rgb(23,80, 119);
+  border-bottom: 15px solid rgb(23,80, 119);
+  padding: 20px;
+  text-align: center;
+}
+.shoeCards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  justify-content: center;
+}
+.shoeCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px;
+
+
+}
+.shoeImg{
+  width: 80%;
+  height: auto;
+}
+
+.shoeCards h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: rgb(23,80, 119) ;
+}
+.shoeCards p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
