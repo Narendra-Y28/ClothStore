@@ -17,8 +17,6 @@ export default function SecondPage() {
                     <img className ="imgCard" src='https://dappered.com/wp-content/uploads/2022/02/Taylor-Stitch-Loden-Suede-Chukka-header-1500-v2-1320x740.jpg' alt=''/>
                     </Link>
                     <h3 className='cardTitle'>SHOES</h3>
-                    
-                   
                 </div>
                 <div className='card'>
                     <Link to = '/clothes'>
